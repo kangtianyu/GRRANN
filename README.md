@@ -5,7 +5,7 @@ In this work, we develop a Regularized Artificial Neural Network (ANN) that enco
 
 ## 2. Project Setup
 
-You can clone or download our code from GitHub. To run our code, you need have java runtime environment on your platform. You can go to https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html and follow the instructions to finish this step. We provide pre-build jar file which can make you run our code directly. You can run our code under a GUI or in console mode. In the following sections, we will introduce the interfaces and commands to run our code.Please notice, due to the space limit of GitHub, we only put part of data on GitHub.
+You can clone or download our code from GitHub. To run our code, you need have java 8+ runtime environment on your platform. You can go to https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html and follow the instructions to finish this step. We provide pre-build jar file which can make you run our code directly. You can run our code under a GUI or in console mode. In the following sections, we will introduce the interfaces and commands to run our code.Please notice, due to the space limit of GitHub, we only put part of data on GitHub.
 
 ## 3.1 Run Code under GUI
 
@@ -52,3 +52,7 @@ This is a test which using one dataset as the training set and the other as the 
 This is a Top-10 Bootstrap test progress, which will output the most common high-frequency genes. With GUI, you could click "Top-10 Bootstrap" -> "Default Setting" -> "Start" and watch the results. With console, you should type
 
     java -jar GRRANN.jar -b -ent data/kb/string.ents -rel data/kb/string.rels -train results.data/UC/GSE12251/GSE12251_data.txt
+
+## 5. Build Project
+
+Although our project are pre-builded, you can easily rebuild it if you do anything change in the source code. Under the project directory, you can use "ant GUI.xml" to rebuild GUI.jar, or use "ant GRRANN.xml" to rebuild GRRANN.jar.
