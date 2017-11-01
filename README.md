@@ -16,22 +16,22 @@ With this GUI, you can choose one of the three tests, change the hyper-parameter
 ## 3.2 Run Code under console
 
 You can also run our code under a pure console environment. Go to the project directory, use "java -jar GRRANN.jar" to run the tests. Please notice you need to add some parameters to run the code correctly.
-	-c		Do cross validation test.
-	-t		Do train-test validation.
-	-b		Do top-10 bootstrap.
-	---		Please notice, the last -c/t/b flag will active, and one -c/t/b is needed.
-	-ent path	Path to network node file.
-	-rel path	Path to network relation file.
-	-train path	Path to train file.
-	---		Please notice, these three flags are always necessary to run the code.
-	-test path	Path to test file. Only needed if using flag -t.
-	-nov integer	Change the number of votes in cross validations tests. Have no influence if using other test type.
-	-lamb double	Change the value of lambda, which will change the weight of regularization during training. Use 1e-5 if not specified.
-	-eta double	Change the learning rate. Use 5e-3 if not specified.
-	-mitr integer	Change the max number of training epoches. Use 2000 if not specified.
-	-rnde true|false	Use random shuffeled network relations or not. The default value is false.
-	-regt 0-4	Type of regularizations. 0(default)=l2-l1|1=l2-null|2=null-l1|3=l2-l2|4=l1-l1
-	-edgt 0-3	Type of relation selected in network. 0(default)=All|1=+(increase)|2=-(decrease)|3=other 
+    -c		Do cross validation test.
+    -t		Do train-test validation.
+    -b		Do top-10 bootstrap.
+    ---		Please notice, the last -c/t/b flag will active, and one -c/t/b is needed.
+    -ent path	Path to network node file.
+    -rel path	Path to network relation file.
+    -train path	Path to train file.
+    ---		Please notice, these three flags are always necessary to run the code.
+    -test path	Path to test file. Only needed if using flag -t.
+    -nov integer	Change the number of votes in cross validations tests. Have no influence if using other test type.
+    -lamb double	Change the value of lambda, which will change the weight of regularization during training. Use 1e-5 if not specified.
+    -eta double	Change the learning rate. Use 5e-3 if not specified.
+    -mitr integer	Change the max number of training epoches. Use 2000 if not specified.
+    -rnde true|false	Use random shuffeled network relations or not. The default value is false.
+    -regt 0-4	Type of regularizations. 0(default)=l2-l1|1=l2-null|2=null-l1|3=l2-l2|4=l1-l1
+    -edgt 0-3	Type of relation selected in network. 0(default)=All|1=+(increase)|2=-(decrease)|3=other 
 
 ## 4. Sample Test
 ### 1. Cross Validation Test
