@@ -34,7 +34,7 @@ You can also run our code under a pure console environment. Go to the project di
     -regt 0-4		Type of regularizations. 0(default)=l2-l1|1=l2-null|2=null-l1|3=l2-l2|4=l1-l1
     -edgt 0-3		Type of relation selected in network. 0(default)=All|1=+(increase)|2=-(decrease)|3=other 
 
-## 4. Sample Test
+## 4. Sample Tests
 ### 1. Cross Validation Test
 
 This is a test which do a cross validation on a single datasets. It will creat severl threads with different training set and testing set and compute them simultaneously. The output is the statistics and average results of the cross validation tests. With GUI, you could click "Cross Validation" -> "Default Setting" -> "Start" and watch the results. With console, you should type
