@@ -16,6 +16,7 @@ With this GUI, you can choose one of the three tests, change the hyper-parameter
 ## 3.2 Run Code under console
 
 You can also run our code under a pure console environment. Go to the project directory, use "java -jar GRRANN.jar" to run the tests. Please notice you need to add some parameters to run the code correctly.
+
     -c		Do cross validation test.
     -t		Do train-test validation.
     -b		Do top-10 bootstrap.
