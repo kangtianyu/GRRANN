@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project GRRANN">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/GUI.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="GUI"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.jarfile}/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/ajt-2.9.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/android-x.x.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/commons-math3-3.6.1-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/commons-math3-3.6.1-sources.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/commons-math3-3.6.1-test-sources.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/commons-math3-3.6.1-tests.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/commons-math3-3.6.1-tools.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/commons-math3-3.6.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/jamtio.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/javaml-0.1.7.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/json-simple-1.1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/neuroph-adapters-2.92.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/neuroph-contrib-2.92.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/neuroph-core-2.92.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/neuroph-imgrec-2.92.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/neuroph-ocr-2.92.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/neuroph-samples-2.92.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/poi-3.10-FINAL-20140208.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/slf4j-api-1.7.5.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/weka.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/lib/slf4j-nop-1.7.6.jar"/>
+        </jar>
+    </target>
+</project>
