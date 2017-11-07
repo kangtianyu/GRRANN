@@ -49,6 +49,7 @@ public class StdDataset {
 	// P value of T-Test
 	private double[] tTestPVal;
 	private HashMap<Integer, Integer> hide_node_content;
+	private boolean rndEdg;
 	// sorted gene network
 	private static ArrayList<ArrayList<Integer>> network;
 	
@@ -63,7 +64,8 @@ public class StdDataset {
 	public StdDataset(String networkEnds, String networkRels, boolean rndEdg, int edgType, PrintStream out) {
 		
 		this.networkEnds = networkEnds;
-		this.networkRels = networkRels;		
+		this.networkRels = networkRels;
+		this.rndEdg = rndEdg;
 		subNmb = 0;
 		uid2id = new HashMap<Integer,Integer>();
 		id2uid = new HashMap<Integer,Integer>();
@@ -135,8 +137,6 @@ public class StdDataset {
 			System.out.println("geneEdge read error");
 			e.printStackTrace();
 		}
-		
-		if(rndEdg) randomNetwork();
 	}
 
 	public void readData(String fileName){		
@@ -314,7 +314,10 @@ public class StdDataset {
 //				nodeConnection.add((Integer) obj.o);
 //			}
 			network.add(nodeConnection);
-		}		
+		}
+
+		if(rndEdg) randomNetwork();
+		
 		out.println("Edge number: " + count);
 		
 		out.println("standardize end");
@@ -337,7 +340,8 @@ public class StdDataset {
 	}
 	
 	public int getHiddenLayerSize(){
-		return hidnodes.size();
+//		return hidnodes.size();
+		return hide_node_content.size();
 	}
 	
 	public int getInputLayerSize(){
@@ -352,7 +356,7 @@ public class StdDataset {
 		return hide_node_content.get(idx);
 	}
 	
-	public static void randomNetwork(){
+	public void randomNetwork(){
 		ArrayList<ArrayList<Integer>> newNetwork = new ArrayList<ArrayList<Integer>>();
 		for(int i=0;i<labels.size();i++){
 			newNetwork.add(new ArrayList<Integer>());
@@ -361,7 +365,7 @@ public class StdDataset {
 		int from,to;
 		for(int i=0;i<network.size();i++){
 			from = rnd.nextInt(labels.size());
-			to = rnd.nextInt(labels.size());
+			to = rnd.nextInt(hide_node_content.size());
 			newNetwork.get(from).add(to);
 		}		
 		network = newNetwork;
