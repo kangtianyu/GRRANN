@@ -7,6 +7,7 @@
 
 <p>You can clone or download our the directly from GitHub. To run the code, you need to install java 8+ runtime environment on your platform. You can go to <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html</a> and follow the instructions to finish this step. We provide pre-build jar as well. We also provide a GUI for ease of use.  In the following sections, we will introduce the interfaces and commands for running the code.</p>
 
+<h2>3. Usage</h2>
 <h3>3.1 Run Code under GUI</h3>
 
 ![Alt text](GUI.png?raw=true "GUI Screencut")
@@ -34,18 +35,18 @@
 </code></pre>
 
 <h2>4. Sample Tests</h2>
-<h3>1. Cross Validation Test</h3>
+<h3>4.1 Cross Validation Test</h3>
 
 <p>This is a test which does a cross-validation on a single dataset. It will create several threads with the different training set and testing set and compute them simultaneously. The output is the statistics and average results of the cross-validation tests. With GUI, you could click "Cross Validation" -&gt; "Default Setting" -&gt; "Start" and watch the results. With console, you should type</p>
 <pre><code>java -jar GRRANN.jar -c -ent data/kb/string.ents -rel data/kb/string.rels -train results.data/UC/GSE12251/GSE12251_data.txt
 </code></pre>
 
-<h3>2. Independent Train-Test Validation</h3>
+<h3>4.2 Independent Train-Test Validation</h3>
 <p>This is a test which using one dataset as the training set and the other as the testing set. It will create several threads with the same setting, compute simultaneously and output the statistics and average balanced accuracy. With GUI, you could click "Train-Test" -&gt; "Default Setting" -&gt; "Start" and watch the results. With console, you should type</p>
 <pre><code>java -jar GRRANN.jar -t -ent data/kb/string.ents -rel data/kb/string.rels -train results.data/UC/GSE12251/GSE12251_data.txt -test data/UC/GSE14580/GSE14580_data.txt
 </code></pre>
 
-<h3>3. Top-10 Bootstrap Test</h3>
+<h3>4.3 Top-10 Bootstrap Test</h3>
 <p>This is a Top-10 Bootstrap test progress, which will output the most common high-frequency genes. With GUI, you could click "Top-10 Bootstrap" -&gt; "Default Setting" -&gt; "Start" and watch the results. With console, you should type</p>
 <pre><code>java -jar GRRANN.jar -b -ent data/kb/string.ents -rel data/kb/string.rels -train results.data/UC/GSE12251/GSE12251_data.txt
 </code></pre>
